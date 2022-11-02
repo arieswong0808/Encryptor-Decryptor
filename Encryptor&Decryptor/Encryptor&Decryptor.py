@@ -43,7 +43,7 @@ def decrypt(line, key):
     p = base64.b64decode(line).decode("utf-8")
     de_str = ""
     for i,j in zip(p.split("_")[:-1],key): # i is data, j is key
-        temp = chr(int(i) - ord(j)) # decryption = (encryption Unicode碼字符 - key Unicode) character
+        temp = chr(int(i) - ord(j)) # decryption = (encryption Unicode - key Unicode) character
         de_str = de_str+temp
     return de_str
 
